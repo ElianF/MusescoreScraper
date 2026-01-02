@@ -134,6 +134,7 @@ def main():
             page += 1
     else:
         driver.quit()
+        print()
 
     if image_urls:
         # 2. Setup Temporary Directory using pathlib
@@ -142,6 +143,7 @@ def main():
 
         # 3. Download images
         image_paths = download_images(image_urls, tmp_dir)
+        print()
 
         # 4. Convert to PDF
         target_width = 595
